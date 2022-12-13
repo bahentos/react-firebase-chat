@@ -1,0 +1,215 @@
+// Colors solid
+$blue-light: #eee9fd;
+$blue-purple: #6f47eb;
+$red-light: #fbe4e1;
+$red: #eb4771;
+$gray-light: #e9ebf0;
+$gray-medium: #cccccc;
+$gray-dark: #5c5f62;
+$blue-gray: rgb(60, 60, 70);
+$pink: #ef87fe;
+
+$black-dark: hsl(240, 3%, 8%);
+$white: #ffffff;
+
+// Colors gradient
+$purple-pink-gr: linear-gradient(to bottom left, $blue-purple, $pink);
+$pink-purple-gr: linear-gradient(to top, $blue-purple, $pink);
+
+//Transform
+$duration: 0.15s;
+
+//Container
+$header-height: 64px;
+
+%container-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+%container-center {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+%container-center-top {
+  display: grid;
+  justify-content: center;
+  align-items: start;
+}
+
+%container-left-top {
+  display: grid;
+  justify-content: left;
+  align-items: start;
+}
+
+%container-right-top {
+  display: grid;
+  justify-content: right;
+  align-items: start;
+}
+
+%container-auto-column {
+  display: grid;
+  justify-content: left;
+  grid-auto-flow: column;
+  gap: 8px;
+}
+
+%container-auto-row {
+  display: grid;
+  justify-content: left;
+  grid-auto-flow: row;
+  gap: 8px;
+}
+
+//text-style
+$font-family: Nunito;
+$font-letter-spacing: 0.01em;
+$font-style: normal;
+
+%text-display-xl {
+  font-family: $font-family;
+  font-style: $font-style;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: $font-letter-spacing;
+}
+
+%text-display-lg {
+  font-family: $font-family;
+  font-style: $font-style;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: $font-letter-spacing;
+}
+
+%text-display-md {
+  font-family: $font-family;
+  font-style: $font-style;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 34px;
+  letter-spacing: $font-letter-spacing;
+}
+
+%text-heading-lg {
+  font-family: $font-family;
+  font-style: $font-style;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: $font-letter-spacing;
+}
+
+%text-heading-md {
+  font-family: $font-family;
+  font-style: $font-style;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: $font-letter-spacing;
+}
+
+%text-heading-sm {
+  font-family: $font-family;
+  font-style: $font-style;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: $font-letter-spacing;
+}
+
+%text-medium-xl {
+  font-family: $font-family;
+  font-style: $font-style;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: $font-letter-spacing;
+}
+
+%text-medium-lg {
+  font-family: $font-family;
+  font-style: $font-style;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: $font-letter-spacing;
+}
+
+%text-medium-md {
+  font-family: $font-family;
+  font-style: $font-style;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 23px;
+  letter-spacing: $font-letter-spacing;
+}
+
+%text-medium-sm {
+  font-family: $font-family;
+  font-style: $font-style;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: $font-letter-spacing;
+}
+
+%text-medium-xs {
+  font-family: $font-family;
+  font-style: $font-style;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 21px;
+  letter-spacing: $font-letter-spacing;
+}
+
+%text-regular-xl {
+  font-family: $font-family;
+  font-style: $font-style;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: $font-letter-spacing;
+}
+
+%text-regular-lg {
+  font-family: $font-family;
+  font-style: $font-style;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: $font-letter-spacing;
+}
+
+%text-regular-md {
+  font-family: $font-family;
+  font-style: $font-style;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 23px;
+  letter-spacing: $font-letter-spacing;
+}
+
+%text-regular-sm {
+  font-family: $font-family;
+  font-style: $font-style;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: $font-letter-spacing;
+}
+
+%text-regular-xs {
+  font-family: $font-family;
+  font-style: $font-style;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 21px;
+  letter-spacing: $font-letter-spacing;
+}
