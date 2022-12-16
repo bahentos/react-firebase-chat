@@ -1,4 +1,4 @@
-import s from "./Login.module.css";
+import s from "./Login.module.scss";
 
 const Login = () => {
   return <div>Login</div>;
