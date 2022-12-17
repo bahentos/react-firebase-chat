@@ -65,6 +65,7 @@ const Chat = () => {
               <div>{message.text}</div>
             </div>
           ))}
+          <div className={s.wrapper_Scrollbottom}></div>
         </div>
         <Grid
           className={s.inputbox}
