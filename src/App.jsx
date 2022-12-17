@@ -1,10 +1,18 @@
-import { Outlet, Route, Routes } from "react-router-dom";
+import { useContext } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { Context } from ".";
 import s from "./App.module.scss";
 import AppRouter from "./components/AppRouter/AppRouter";
-import Chat from "./components/Chat/Chat";
-import Login from "./components/Login/Login";
+import Loader from "./components/AppRouter/Loader";
 import Navbar from "./components/Navbar/Navbar";
 function App() {
+  const { auth } = useContext(Context);
+  const [user, loading, error] = useAuthState(auth);
+
+  if (loading) {
+    return <Loader />;
+  }
+
   return (
     <div className={s.appWrapper}>
       <Navbar />

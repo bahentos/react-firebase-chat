@@ -3,9 +3,9 @@ import ReactDOM from "react-dom/client";
 import "./index.scss";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
-import firebase from "firebase";
-import "firebase/firestore";
-import "firebase/auth";
+import firebase from "firebase/compat/app";
+import "firebase/compat/firestore";
+import "firebase/compat/auth";
 
 // Initialize Firebase
 firebase.initializeApp({
