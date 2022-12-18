@@ -1,5 +1,5 @@
 import { Avatar, Button, Container, Grid, TextField } from "@mui/material";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Context } from "../..";
 import s from "./Chat.module.scss";
@@ -14,6 +14,12 @@ const Chat = () => {
   const [messages, loading] = useCollectionData(
     firestore.collection("messages").orderBy("createdAt")
   );
+
+  const messagesEndRef = useRef(null);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
@@ -31,6 +37,10 @@ const Chat = () => {
     });
     setValue("");
   };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
 
   if (loading) {
     return <Loader />;
@@ -65,7 +75,7 @@ const Chat = () => {
               <div>{message.text}</div>
             </div>
           ))}
-          <div className={s.wrapper_Scrollbottom}></div>
+          <div ref={messagesEndRef}></div>
         </div>
         <Grid
           className={s.inputbox}
