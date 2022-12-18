@@ -64,6 +64,10 @@ const Chat = () => {
                     ? "2px solid green"
                     : "2px dashed red",
                 marginLeft: user.uid === message.uid ? "auto" : "10px",
+                borderRadius:
+                  user.uid === message.uid
+                    ? "2rem 2rem 0 2rem"
+                    : "2rem 2rem 2rem 0",
                 width: "fit-content",
                 padding: "0.5rem",
               }}
@@ -75,7 +79,7 @@ const Chat = () => {
               <div>{message.text}</div>
             </div>
           ))}
-          <div ref={messagesEndRef}></div>
+          <div className={s.messagesEnd} ref={messagesEndRef}></div>
         </div>
         <Grid
           className={s.inputbox}
